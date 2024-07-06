@@ -97,5 +97,6 @@ Contributers are Siddhi , Sujal ,Swakshan , Srushti and Komal.
 
 ## Output
 
-<img src="Output images/chrome_13ITueuxNu.png" alt="Clause Identification">
+<img src="Output images/chrome_13ITueuxNu.png" alt="Output img">
 
+<img src="Output images/chrome_bfTW6XIG8u.png" alt="Output img">
