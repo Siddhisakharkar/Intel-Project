@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clause Comparison Tool</title>
+    <link rel="stylesheet" href="../static/style.css">
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <img src="../static/file.png" alt="something">
+            <h1>Business Contract Validation</h1>
+        </div>
+    </nav>
+
+    <div  class="container main">
+        <form id="upload-form" method="post" enctype="multipart/form-data" class="form">
+            <div class="file-upload">
+                <label for="file_to_compare">Upload pdf to Compare:</label>
+                <input type="file" name="file_to_compare" id="file_to_compare" required>
+            </div>
+            <div class="file-upload">
+                <label for="template_file">Upload Template pdf:</label>
+                <input type="file" name="template_file" id="template_file" required>
+            </div>
+            <button type="submit" class="btn">Compare Files</button>
+        </form>
+
+
+        {% with messages = get_flashed_messages() %}
+        {% if messages %}
+        <ul class="flashes">
+            {% for message in messages %}
+            <li>{{ message }}</li>
+            {% endfor %}
+        </ul>
+        {% endif %}
+        {% endwith %}
+
+        {% if text_to_compare or text_template %}
+        <div class="section">
+            <h2>Extracted Texts</h2>
+            <div class="scrollable">
+                <div class="extracted-text">
+                    <h3>Text from File to Compare</h3>
+                    <pre>{{ text_to_compare }}</pre>
+                </div>
+                <div class="extracted-text">
+                    <h3>Text from Template File</h3>
+                    <pre>{{ text_template }}</pre>
+                </div>
+            </div>
+        </div>
+        {% endif %}
+
+        {% if clauses_to_compare or clauses_template %}
+        <div class="section">
+            <h2>Identified Clauses</h2>
+            <div class="scrollable">
+                <div class="clauses-section">
+                    <h3>Clauses from File to Compare</h3>
+                    <pre>{{ clauses_to_compare | tojson(indent=2) }}</pre>
+                </div>
+                <div class="clauses-section">
+                    <h3>Clauses from Template File</h3>
+                    <pre>{{ clauses_template | tojson(indent=2) }}</pre>
+                </div>
+            </div>
+        </div>
+        {% endif %}
+
+        {% if results %}
+        <div class="section">
+            <h2>Summary of Deviation Comparison Results</h2>
+            <div class="scrollable">
+                <div class="results">
+                    {% for result in results %}
+                    <div class="result-item">
+                        <h3>{{ result.clause_name }}</h3>
+                        <p><strong>Predicted Type:</strong> {{ result.predicted_type }}</p>
+                        <p><strong>Cosine Similarity:</strong> {{ result.cosine_similarity }}</p>
+                        <p><strong>Named Entities:</strong> {{ result.ner_entities }}</p>
+                        <pre>{{ result.deviation_summary }}</pre>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+        {% if pdf_path %}
+        <div class="section">
+            <h2>Download Highlighted Deviations</h2>
+            <a href="{{ url_for('download_pdf', filename='highlighted_deviations.pdf') }}"
+                download="highlighted_deviations.pdf"><button class="btn">Download PDF</button></a>
+        </div>
+        {% endif %}
+        {% endif %}
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; We find Deviations.......</p>
+        </div>
+    </footer>
+
+</body>
+
+</html>
