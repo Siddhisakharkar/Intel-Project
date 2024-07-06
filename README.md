@@ -92,7 +92,3 @@ contract-comparison-tool/
 
 Contributions are Siddhi , Sujal ,Swakshan , Srushti and Komal.
 
-
----
-
-This README provides an overview of the project, its features, installation instructions, usage guidelines, and placeholders for images of the outputs. Adjust the paths to the images as needed.
