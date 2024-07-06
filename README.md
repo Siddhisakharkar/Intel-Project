@@ -29,6 +29,9 @@ The project uses the following libraries:
 - transformers
 - io
 - reportlab
+- pillow
+- torch
+- Werkzeug
 
 ## Installation
 
