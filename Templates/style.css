@@ -1,0 +1,153 @@
+@import url('https://fonts.googleapis.com/css2?family=Arsenal+SC:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Arsenal SC", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    background-color: #121212;
+    color: #ffffff;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+.main{
+    width: 100vw;
+    min-height: 100vh;
+}
+.navbar {
+    background-color: #333;
+    padding: 10px 0;
+    /* box-shadow: 1px 1px 10px white; */
+    filter: drop-shadow(1px 1px 3px gray);
+    
+}
+.navbar .container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+}
+.navbar .container h1 {
+    color: #fff;
+    text-align: center;
+}
+.navbar .container img{
+    height: 50px;
+    width: 50px;
+    object-fit: contain;
+}
+
+.form {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+}
+
+.file-upload {
+    display: flex;
+    flex-direction: column;
+}
+
+.file-upload label {
+    margin-bottom: 10px;
+}
+
+.file-upload input {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #444;
+    color: #fff;
+}
+
+.btn {
+    height: max-content;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #288ca7;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #96bdc3;
+}
+
+
+.section {
+    margin-bottom: 20px;
+}
+
+h2 {
+    margin-bottom: 10px;
+}
+
+.scrollable {
+    display: flex;
+    gap: 2rem;
+    overflow-y: auto;
+    max-height: 300px;
+    border: 1px solid #444;
+    padding: 10px;
+    background-color: #333;
+    border-radius: 5px;
+}
+
+.extracted-text,
+.clauses-section {
+    background-color: #222;
+    padding: 10px;
+    border-radius: 5px;
+    width: 100%;
+    height: max-content;
+}
+
+.results {
+    padding: 10px;
+    border-radius: 5px;
+    width: 100%;
+}
+
+pre {
+    white-space: pre-wrap;
+}
+
+.result-item {
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 1px solid #444;
+    background-color: #222;
+    border-radius: 5px;
+}
+
+.result-item h3 {
+    margin-bottom: 10px;
+}
+
+.result-item p {
+    margin-bottom: 5px;
+}
+
+.footer {
+    background-color: #333;
+    padding: 10px 0;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.footer p {
+    color: #fff;
+}
