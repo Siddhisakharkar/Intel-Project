@@ -94,4 +94,5 @@ Contributers are Siddhi , Sujal ,Swakshan , Srushti and Komal.
 
 ## Output
 
+<img src="output_images/chrome_13ITueuxNu.png" alt="Clause Identification">
 
