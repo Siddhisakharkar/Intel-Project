@@ -1,7 +1,3 @@
-Here's a README file with descriptions and placeholders for images of outputs:
-
----
-
 # Contract Document Comparison Tool
 
 This project is a Flask web application designed to compare business contract documents based on the sentiment analysis of clauses and sub-clauses. The application identifies deviations, performs Named Entity Recognition (NER), and calculates cosine similarity between the clauses of two documents. The comparison results and deviations are highlighted in a generated PDF report.
