@@ -90,5 +90,8 @@ contract-comparison-tool/
 
 ## Contributing
 
-Contributions are Siddhi , Sujal ,Swakshan , Srushti and Komal.
+Contributers are Siddhi , Sujal ,Swakshan , Srushti and Komal.
+
+## Output
+
 
